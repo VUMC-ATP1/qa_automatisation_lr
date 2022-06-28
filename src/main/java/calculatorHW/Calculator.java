@@ -1,3 +1,5 @@
+package calculatorHW;
+
 public class Calculator {
     int result;
 
