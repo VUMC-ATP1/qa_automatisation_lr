@@ -10,6 +10,7 @@ public class CheckoutPage {
     private final By lastName = By.id("last-name");
     private final By zipCode = By.id("postal-code");
     private final By continueButton = By.id("continue");
+    private final By msgError = By.cssSelector(".error-message-container h3");
     private WebDriver driver;
     public CheckoutPage(WebDriver driver) {
         this.driver = driver;
@@ -42,5 +43,8 @@ public class CheckoutPage {
 
     public void setContinueButton() {
         getContinueButton().click();
+    }
+    public WebElement getMsgError() {
+        return driver.findElement(msgError);
     }
 }
